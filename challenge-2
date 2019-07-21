@@ -3,4 +3,4 @@ def LetterCapitalize(str):
     return str.title()
 
 
-print (LetterCapitalize(input("enter phrase: ")))
+print (LetterCapitalize(input("enter a phrase: ")))
