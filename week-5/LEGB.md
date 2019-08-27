@@ -1,4 +1,4 @@
-## Would would be the output of this program
+## What would be the output of this program?
 
 
 def outer_function():
@@ -21,6 +21,6 @@ print('a =', a)
 
 
 # Output:
-a = 30
+a = 30 
 a = 20
 a = 10
