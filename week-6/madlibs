@@ -1,0 +1,24 @@
+# Create a Mad Libs program that reads in text files and lets the user add their own text
+# anywhere the word ADJECTIVE, NOUN, ADVERB, or VERB appears in the text file.
+import string
+def mad_libs():
+
+    keywords = ["ADJECTIVE", "NOUN", "ADVERB", "VERB"]
+    new_word = []
+
+    madlibs_file = open("madlibs.txt", "r")
+    content = madlibs_file.read().split()
+
+    for i in content:
+        if i.strip(string.punctuation) in keywords:
+            new_word.append(input("Enter a {0}: ".format(i)))
+        else:
+            new_word.append(i)
+
+    madlibs_file = open("madlibs1.txt", "w")
+    madlibs_file.write(" ".join(new_word))
+
+
+    madlibs_file.close()
+    print(new_word)
+mad_libs()
