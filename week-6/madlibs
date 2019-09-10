@@ -9,11 +9,11 @@ def mad_libs():
     madlibs_file = open("madlibs.txt", "r")
     content = madlibs_file.read().split()
 
-    for i in content:
-        if i.strip(string.punctuation) in keywords:
-            new_word.append(input("Enter a {0}: ".format(i)))
+    for word in content:
+        if word.strip(string.punctuation) in keywords:
+            new_word.append(input("Enter a {0}: ".format(word)))
         else:
-            new_word.append(i)
+            new_word.append(word)
 
     madlibs_file = open("madlibs1.txt", "w")
     madlibs_file.write(" ".join(new_word))
